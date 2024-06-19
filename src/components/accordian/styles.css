@@ -1,0 +1,58 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper button{
+    padding: 10px 20px;
+    background: #0054b4;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: none;
+}
+
+.wrapper button:hover{
+    background: white;
+    color: #0054b4;
+}
+
+.accordian {
+    width: 600px;
+}
+
+.item {
+    background: #0077ff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.title {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: left;
+}
+
+span {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.content {
+    color: white;
+    height: auto;
+    text-align: left;
+}
