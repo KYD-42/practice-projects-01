@@ -18,8 +18,9 @@ export default function Accordian() {
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
   }
-
-   function handleMultiSelection(getCurrentId) {
+  // function to handle multiple selected items - we will pass the id of the selected item
+  //
+  function handleMultiSelection(getCurrentId) {
     let cpyMutiple = [...multiple];
     const findIndexOfCurrentId = cpyMutiple.indexOf(getCurrentId);
 
@@ -36,9 +37,19 @@ export default function Accordian() {
   // the button component is used to enable multi selection, so that we can have multiple accordians open at the same time
   return (
     <div className="wrapper">
-      <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
-        Enable Multi Selection
+      <button
+        onClick={() => {
+          if (enableMultiSelection) {
+            setEnableMultiSelection(false);
+          } else {
+            setEnableMultiSelection(true);
+          }
+        }}
+        className={enableMultiSelection ? "button-on" : "button-off"}
+      >
+        {enableMultiSelection ? "Multi Selection ON" : "Multi Selection OFF"}
       </button>
+
       <div className="accordian">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
