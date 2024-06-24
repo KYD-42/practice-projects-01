@@ -49,7 +49,6 @@ export default function Accordian() {
       >
         {enableMultiSelection ? "Multi Selection ON" : "Multi Selection OFF"}
       </button>
-      {/* i can change this one to to a conditional rendering of color based on state of the accordian */}
       <div className="accordian">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
