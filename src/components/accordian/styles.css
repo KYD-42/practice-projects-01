@@ -6,7 +6,7 @@
     gap: 20px;
 }
 
-.wrapper button{
+.wrapper button {
     padding: 10px 20px;
     font-weight: bold;
     font-size: 16px;
@@ -16,22 +16,22 @@
     border: none;
 }
 
-.button-on{
+.button-on {
     background: white;
     color: #0054b4;
-  
+
 }
 
-.button-off{
+.button-off {
     background: #0054b4;
-    color:white;
+    color: white;
 }
 
-.wrapper .button-on:hover{
+.wrapper .button-on:hover {
     filter: drop-shadow(0px 0px 10px #0054b4);
 }
 
-.wrapper .button-off:hover{
+.wrapper .button-off:hover {
     filter: drop-shadow(0px 0px 5px white);
 }
 
@@ -39,15 +39,23 @@
     width: 600px;
 }
 
-.item {
+.item-multi {
+    background: white;
+    color: #0077ff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.item-single {
     background: #0077ff;
+    color: white;
     margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
 .title {
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +72,6 @@ span {
 }
 
 .content {
-    color: white;
     height: auto;
     text-align: left;
 }

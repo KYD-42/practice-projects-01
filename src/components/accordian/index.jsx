@@ -49,11 +49,13 @@ export default function Accordian() {
       >
         {enableMultiSelection ? "Multi Selection ON" : "Multi Selection OFF"}
       </button>
-
+      {/* i can change this one to to a conditional rendering of color based on state of the accordian */}
       <div className="accordian">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div className="item">
+            <div
+              className={enableMultiSelection ? "item-multi" : "item-single"}
+            >
               <div
                 // we will pass the id of the selected item on click
                 // the function is updated with the id of the selected item
