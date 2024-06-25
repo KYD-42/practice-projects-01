@@ -1,6 +1,8 @@
-button{
+#switch-btn,
+#random-btn {
     font-size: 24px;
     font-weight: bold;
+    text-transform: uppercase;
     padding: 1em 1em;
     margin-inline: 0.5em;
     color: #fff;
@@ -11,7 +13,8 @@ button{
     cursor: pointer;
 }
 
-button:active {
+#switch-btn:active,
+#random-btn:active {
     box-shadow: none;
     position: relative;
     top: 0.5em;

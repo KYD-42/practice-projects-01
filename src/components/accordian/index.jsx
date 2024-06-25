@@ -1,6 +1,6 @@
 import { useState } from "react";
-import data from "./data";
-import "./styles.css";
+import data from "../accordian/data.js";
+import "../accordian/styles.css";
 // types of accordians
 // single selection
 // multiple selection

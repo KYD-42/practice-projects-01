@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./style.css";
+import "../random-color/styles.css";
 export default function RandomColor() {
   // we'll be creating 2 set states - one for the type of color code (HEX or RGB);
   // and the second one to store the current color;
@@ -61,7 +61,7 @@ export default function RandomColor() {
     >
       <div>
         {/* button to switch type of color code */}
-        <button
+        <button id="switch-btn"
           onClick={() => {
             if (typeOfColor === "hex") {
               setTypeOfColor("rgb");
@@ -75,7 +75,7 @@ export default function RandomColor() {
         </button>
 
         {/* button to generate random color */}
-        <button
+        <button id="random-btn"
           onClick={
             typeOfColor === "hex"
               ? handleCreateRandomHexColor
