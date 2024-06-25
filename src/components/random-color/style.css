@@ -1,0 +1,18 @@
+button{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 1em 1em;
+    margin-inline: 0.5em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    border: none;
+    box-shadow: 0 0.5em rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.5em;
+}
