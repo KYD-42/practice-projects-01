@@ -61,7 +61,8 @@ export default function RandomColor() {
     >
       <div>
         {/* button to switch type of color code */}
-        <button id="switch-btn"
+        <button
+          id="switch-btn"
           onClick={() => {
             if (typeOfColor === "hex") {
               setTypeOfColor("rgb");
@@ -75,7 +76,8 @@ export default function RandomColor() {
         </button>
 
         {/* button to generate random color */}
-        <button id="random-btn"
+        <button
+          id="random-btn"
           onClick={
             typeOfColor === "hex"
               ? handleCreateRandomHexColor
@@ -85,18 +87,7 @@ export default function RandomColor() {
           Generate Random Color
         </button>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "#fff",
-          fontSize: "60px",
-          marginTop: "50px",
-          flexDirection: "column",
-          gap: "20px",
-        }}
-      >
+      <div>
         {/* unecessary info - commented out */}
         {/* <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3> */}
         <h1>{color}</h1>

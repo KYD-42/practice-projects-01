@@ -19,3 +19,27 @@
     position: relative;
     top: 0.5em;
 }
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 120px;
+    margin-block: 60px;
+    flex-direction: column;
+    
+}
+
+
+@media (max-width: 768px) {
+    #switch-btn,
+    #random-btn {
+      margin-block: 0.5em;
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 80px;
+    }
+  }
