@@ -21,6 +21,11 @@ export default function StarRating({ noOfStars = 5 }) {
     setHover(rating);
   }
 
+  function handleReset() {
+    setRating(0);
+    setHover(0);
+  }
+
   function message(rating) {
     switch (rating) {
       case 1:
@@ -34,14 +39,16 @@ export default function StarRating({ noOfStars = 5 }) {
       case 5:
         return "Excellent";
       default:
-        return "Please rate the product"; // Or any other default message
+        return "Rate us!"; // Or any other default message
     }
   }
 
   return (
     <section className="star-rating">
       <div>
-        <h1 style={{ color: "gold", fontWeight: "bold" }}>{message(rating)}</h1>
+        <h1 style={{ color: "#FFB300", fontWeight: "bold" }}>
+          {message(rating)}
+        </h1>
       </div>
       <div>
         {[...Array(noOfStars)].map((_, index) => {
@@ -54,10 +61,18 @@ export default function StarRating({ noOfStars = 5 }) {
               onClick={() => handleClick(index)}
               onMouseMove={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave()}
-              size={100}
+              size={200}
+              style={{ cursor: "pointer" }}
+              /* already in the css file - inline styling of the state of the stars component */
+              /* color={index <= (hover || rating) ? "#FFB300" : "#808080"} */
             />
           );
         })}
+      </div>
+      <div>
+        <button className="reset-btn" onClick={handleReset}>
+          RESET
+        </button>
       </div>
     </section>
   );
