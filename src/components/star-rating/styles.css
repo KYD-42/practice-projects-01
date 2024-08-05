@@ -1,0 +1,25 @@
+/* Star rating component styles */
+/* most of the styling is done in the index.js file as inline styling for demo purposes, since we're using the react-icons library */
+
+
+/* General styling of the entire div */
+.star-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+/* Styling of state of the stars - active and inactive */
+.active {
+    color: gold;
+}
+
+.inactive {
+    color: grey;
+}
+
+/* the styling of both states is easier done in a separete css file to avoid repetition */
