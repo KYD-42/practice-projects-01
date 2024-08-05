@@ -1,11 +1,13 @@
 import "./App.css";
 import Accordian from "./components/accordian";
+import BackToTopButton from "./components/back-to-top";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
 
 function App() {
   return (
-    <div className="App">
+    <main>
+      <BackToTopButton />
       {/* Accordian component */}
       <Accordian />
       {/* Random Color component */}
@@ -16,7 +18,7 @@ function App() {
       {/* In the example bellow we pass props to the component changing the number of stars to 10 */}
       {/* This example is to show how props can be passed */}
       {/* <StarRating noOfStars={10}/> */}
-    </div>
+    </main>
   );
 }
 
