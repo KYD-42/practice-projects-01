@@ -12,12 +12,12 @@ function App() {
       <Accordian />
       {/* Random Color component */}
       <RandomColor />
-      {/* Star Rating component */}
-      <StarRating />
+      {/* Star Rating component - without props */}
+      {/* <StarRating /> */}
       {/* By default the number of stars is 5. In this case, since no props are passed, the default value is assigned */}
       {/* In the example bellow we pass props to the component changing the number of stars to 10 */}
       {/* This example is to show how props can be passed */}
-      {/* <StarRating noOfStars={10}/> */}
+      <StarRating noOfStars={5} />
     </main>
   );
 }

@@ -38,15 +38,33 @@ export default function StarRating({ noOfStars = 5 }) {
         return "Very Good";
       case 5:
         return "Excellent";
+      case 6:
+        return "Behond hotel rating";
+      case 7:
+        return "Lucky Stars";
+      case 8:
+        return "Heavenly";
+      case 9:
+        return "Perfection";
+      case 10:
+        return "Flawless";
       default:
-        return "Rate us!"; // Or any other default message
+        return rating > 10
+          ? "Ups, you've created a galaxy far away..."
+          : "Rate us!"; // Or any other default message
     }
   }
 
   return (
     <section className="star-rating">
       <div>
-        <h1 style={{ color: "#FFB300", fontWeight: "bold" }}>
+        <h1
+          style={{
+            color: rating > 10 ? "black" : "#FFB300",
+            fontWeight: rating > 10 ? "normal" : "bold",
+            fontSize: rating > 10 ? "2em" : "4em" /* 1em -> 24px */,
+          }}
+        >
           {message(rating)}
         </h1>
       </div>
