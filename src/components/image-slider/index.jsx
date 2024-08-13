@@ -38,17 +38,27 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
     console.log("Right Arrow", currentSlide);
   }
 
+  /* console.log statement inside the useEffect hook checks if the data is fetched successfully */
+  /* And logs "Images Successfuly fetched" to the console if true */
+
   useEffect(() => {
-    if (url !== "") fetchImages(url);
+    if (url !== "")
+      fetchImages(url).then(() => {
+        console.log("Images Successfuly fetched");
+      });
   }, [url]);
 
-  console.log("Images Successfuly fetched", images);
+  /* This console.log serves as a preview of the fetched data */
+  /* It logs the images array to the console, giving us a detailed view */
+  console.log(images);
 
   if (loading) {
+    console.log("Loading data...");
     return <div>Loading data ! Please wait</div>;
   }
 
   if (errorMsg !== null) {
+    console.log(errorMsg);
     return <div>Error occured ! {errorMsg}</div>;
   }
 
