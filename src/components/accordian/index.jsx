@@ -53,6 +53,7 @@ export default function Accordian() {
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div
+              key={dataItem.id || index} // add a unique key prop, preventing a warning in the console when no key is provided
               className={enableMultiSelection ? "item-multi" : "item-single"}
             >
               <div
