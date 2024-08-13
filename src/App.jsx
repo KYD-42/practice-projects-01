@@ -3,10 +3,12 @@ import Accordian from "./components/accordian";
 import BackToTopButton from "./components/back-to-top";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
+import ImageSlider from "./components/image-slider";
 
 function App() {
   return (
     <main>
+      {/* Back to top button component */}
       <BackToTopButton />
       {/* Accordian component */}
       <Accordian />
@@ -18,6 +20,12 @@ function App() {
       {/* In the example bellow we pass props to the component changing the number of stars to 10 */}
       {/* This example is to show how props can be passed */}
       <StarRating noOfStars={5} />
+      {/* Image slider component */}
+      <ImageSlider
+        url={"https://picsum.photos/v2/list"}
+        page={"1"}
+        limit={"10"}
+      />
     </main>
   );
 }
