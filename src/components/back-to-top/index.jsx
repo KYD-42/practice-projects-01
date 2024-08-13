@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import "../back-to-top/styles.css";
 
 const BackToTopButton = () => {
+  // A simple log to print out if the component is rendered, there's no need to create a try-catch block in this component
+  console.log("Back to top component rendered");
+
+  // A state to control the visibility of the button
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -13,6 +17,7 @@ const BackToTopButton = () => {
         setShowButton(false);
       }
     });
+
     return () => {
       window.removeEventListener("scroll", () => {});
     };
