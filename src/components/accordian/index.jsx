@@ -71,10 +71,20 @@ export default function Accordian() {
               </div>
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
-                    <div className="content">{dataItem.answer}</div>
+                    <div className="content">
+                      {dataItem.answer}
+                      {console.log(
+                        `Content of accordian ${dataItem.id} rendered`
+                      )}
+                    </div>
                   )
                 : selected === dataItem.id && (
-                    <div className="content">{dataItem.answer}</div>
+                    <div className="content">
+                      {dataItem.answer}
+                      {console.log(
+                        `Content of accordian ${dataItem.id} rendered`
+                      )}
+                    </div>
                   )}
             </div>
           ))
