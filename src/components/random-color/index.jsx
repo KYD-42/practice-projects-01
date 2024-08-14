@@ -25,7 +25,7 @@ export default function RandomColor() {
     for (let i = 0; i < 6; i++) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
-    // logging the color code to the console for testing purposes;
+    // Logs the HEX values to the console;
     console.log(hexColor);
 
     // updating the color state with the new color code;
@@ -39,6 +39,9 @@ export default function RandomColor() {
     const r = randomColorUtility(256);
     const g = randomColorUtility(256);
     const b = randomColorUtility(256);
+
+    // Logs the RGB values to the console;
+    console.log(`rgb(${r},${g},${b})`);
 
     setColor(`rgb(${r},${g},${b})`);
   }

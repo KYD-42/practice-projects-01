@@ -11,6 +11,7 @@ export default function StarRating({ noOfStars = 5 }) {
 
   function handleClick(getCurrentIndex) {
     setRating(getCurrentIndex);
+    console.log(`Rating updated to ${getCurrentIndex}`);
   }
 
   function handleMouseEnter(getCurrentIndex) {
@@ -24,6 +25,7 @@ export default function StarRating({ noOfStars = 5 }) {
   function handleReset() {
     setRating(0);
     setHover(0);
+    console.log("Rating reset");
   }
 
   function message(rating) {
