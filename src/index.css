@@ -1,5 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* root font size 1 rem -> 24px */
   font-size: 24px;
   /* to remove */
   text-align: center;
