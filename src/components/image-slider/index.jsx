@@ -4,7 +4,7 @@ import "./styles.css";
 
 export default function ImageSlider({ url, page = 1, limit = 5 }) {
   const [images, setImages] = useState([]);
-  /* This varible is to keep track of the current slide */
+  /* this useState hook keeps track of the current slide */
   const [currentSlide, setCurrentSlide] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -69,12 +69,16 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
         className="arrow arrow-left"
       />
       {images && images.length
-        ? images.map((imageItem) => (
+        ? images.map((imageItem, index) => (
             <img
               key={imageItem.id}
               alt={imageItem.download_url}
               src={imageItem.download_url}
-              className="current-image"
+              className={
+                currentSlide === index
+                  ? "current-image"
+                  : "current-image hide-current-image"
+              }
             />
           ))
         : null}
@@ -86,7 +90,15 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
       <span className="circle-indicators">
         {images && images.length
           ? images.map((_, index) => (
-              <button key={index} className="current-indicator"></button>
+              <button
+                key={index}
+                className={
+                  currentSlide === index
+                    ? "current-indicator"
+                    : "current-indicator inactive-indicator"
+                }
+                onClick={() => setCurrentSlide(index)}
+              ></button>
             ))
           : null}
       </span>
