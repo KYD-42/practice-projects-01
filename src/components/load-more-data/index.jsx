@@ -31,7 +31,7 @@ export default function LoadMoreData() {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [count]); // TBD - altered this line;
 
   if (loading) {
     return <div>Loading data! Please wait!</div>;
@@ -52,5 +52,3 @@ export default function LoadMoreData() {
     </div>
   );
 }
-
-/* dummyjson.com/docs/products - where the data is fetched from */
