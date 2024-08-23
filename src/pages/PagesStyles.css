@@ -1,0 +1,21 @@
+.project-cards #switch-btn,
+.project-cards #random-btn {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1em 1em;
+  margin-inline: 0.5em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  border: none;
+  box-shadow: 0 0.5em rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.project-cards #switch-btn:active,
+.project-cards #random-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.5em;
+}
