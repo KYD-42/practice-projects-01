@@ -28,7 +28,7 @@ function App() {
         limit={"10"}
       />
       {/* Load more products component */}
-      <LoadMoreData />
+      {/* <LoadMoreData /> */}
     </main>
   );
 }
