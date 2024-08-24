@@ -1,5 +1,4 @@
-.project-cards #switch-btn,
-.project-cards #random-btn {
+.project-cards button {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
@@ -13,8 +12,7 @@
   cursor: pointer;
 }
 
-.project-cards #switch-btn:active,
-.project-cards #random-btn:active {
+.project-cards button:active {
   box-shadow: none;
   position: relative;
   top: 0.5em;

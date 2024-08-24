@@ -1,14 +1,24 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+
 import Accordian from "./components/accordian";
 import BackToTopButton from "./components/back-to-top";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
 import ImageSlider from "./components/image-slider";
+/* WIP */
 import LoadMoreData from "./components/load-more-data";
 
 function App() {
   return (
     <main>
+      {/* HomePage with links to components as pages, instead of a SPA with every component listed */}
+      {/* WIP */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
       {/* Back to top button component */}
       <BackToTopButton />
       {/* Accordian component */}
@@ -28,6 +38,7 @@ function App() {
         limit={"10"}
       />
       {/* Load more products component */}
+      {/* WIP */}
       {/* <LoadMoreData /> */}
     </main>
   );
