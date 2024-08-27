@@ -39,7 +39,7 @@ export default function LoadMoreData() {
 
   return (
     <div className="container">
-      <div>
+      <div className="product-container">
         {products && products.length
           ? products.map((item) => (
               <div key={item.id}>
@@ -48,6 +48,9 @@ export default function LoadMoreData() {
               </div>
             ))
           : null}
+      </div>
+      <div className="button-container">
+        <button>Load More Products</button>
       </div>
     </div>
   );

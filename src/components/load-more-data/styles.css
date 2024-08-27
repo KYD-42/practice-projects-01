@@ -1,28 +1,11 @@
-/* .load-more-container {
-    display:  flex;
+.container {
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.product-container{
+.product-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
-
-.product{
-    padding: 20px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.product img{
-    width: 200px;
-    height: 200px;
-} */
-
-/* Styles TBD */
-
-/* Testing with different CSS */
