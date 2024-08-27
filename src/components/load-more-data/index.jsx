@@ -5,6 +5,7 @@ export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
+  const [disableButton, setdisableButton] = useState(false);
   /* just like we did in the image slider component we use an async function to fetch the data from the API */
   /* again -> the try catch block is used to handle the error in case the data is not fetched successfully */
   async function fetchProducts() {
@@ -19,7 +20,7 @@ export default function LoadMoreData() {
       const result = await response.json();
 
       if (result && result.products && result.products.length) {
-        setProducts(result.products);
+        setProducts((prevData) => [...prevData, ...result.products]);
         setLoading(false);
       }
       console.log("Products fetched successfully", result);
@@ -33,16 +34,22 @@ export default function LoadMoreData() {
     fetchProducts();
   }, [count]); // TBD - altered this line;
 
+  useEffect(() => {
+    if (products && products.length === 100) {
+      setdisableButton(true);
+    }
+  }, [products]);
+
   if (loading) {
     return <div>Loading data! Please wait!</div>;
   }
 
   return (
-    <div className="container">
+    <div className="load-more-container">
       <div className="product-container">
         {products && products.length
           ? products.map((item) => (
-              <div key={item.id}>
+              <div className="product" key={item.id}>
                 <img src={item.thumbnail} alt={item.title} />
                 <p>{item.title}</p>
               </div>
@@ -50,7 +57,12 @@ export default function LoadMoreData() {
           : null}
       </div>
       <div className="button-container">
-        <button>Load More Products</button>
+        <button disabled={disableButton} onClick={() => setCount(count + 1)}>
+          Load More Products
+        </button>
+        {disableButton ? (
+          <p>You have reached the end of the product list!</p>
+        ) : null}
       </div>
     </div>
   );

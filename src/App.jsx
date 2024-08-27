@@ -39,7 +39,7 @@ function App() {
       />
       {/* Load more products component */}
       {/* WIP */}
-      {/* <LoadMoreData /> */}
+      <LoadMoreData />
     </main>
   );
 }
