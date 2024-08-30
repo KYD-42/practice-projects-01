@@ -67,3 +67,7 @@ export default function LoadMoreData() {
     </div>
   );
 }
+
+
+/* Dummy json file bugs - ID conflict rpinted in console log */
+/* WIP */
