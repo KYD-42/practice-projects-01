@@ -5,9 +5,9 @@ export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
-  const [disableButton, setdisableButton] = useState(false);
-  /* just like we did in the image slider component we use an async function to fetch the data from the API */
-  /* again -> the try catch block is used to handle the error in case the data is not fetched successfully */
+  const [disableButton, setDisableButton] = useState(false);
+  /* Like the image slider component we use an async function to fetch the data from the API */
+  /* The try catch block is used to handle the error in case the data is not fetched successfully */
   async function fetchProducts() {
     try {
       setLoading(true);
@@ -32,16 +32,16 @@ export default function LoadMoreData() {
 
   useEffect(() => {
     fetchProducts();
-  }, [count]); // TBD - altered this line;
+  }, [count]);
 
   useEffect(() => {
     if (products && products.length === 100) {
-      setdisableButton(true);
+      setDisableButton(true);
     }
   }, [products]);
 
   if (loading) {
-    return <div>Loading data! Please wait!</div>;
+    return <div>Loading data ! Please wait.</div>;
   }
 
   return (
@@ -60,13 +60,8 @@ export default function LoadMoreData() {
         <button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Load More Products
         </button>
-        {disableButton ? (
-          <p>You have reached the end of the product list!</p>
-        ) : null}
+        {disableButton ? <p>You have reached 100 products!</p> : null}
       </div>
     </div>
   );
 }
-
-/* Dummy json file bugs - ID conflict rpinted in console log */
-/* WIP - continued, update on teh code required - check original repo */
