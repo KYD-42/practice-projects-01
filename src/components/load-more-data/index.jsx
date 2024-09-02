@@ -68,6 +68,5 @@ export default function LoadMoreData() {
   );
 }
 
-
 /* Dummy json file bugs - ID conflict rpinted in console log */
-/* WIP */
+/* WIP - continued, update on teh code required - check original repo */
